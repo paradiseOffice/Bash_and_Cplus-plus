@@ -1,0 +1,866 @@
+<html><head><title>Errors </title></head>
+<body>
+
+nwindow.cpp:116:80: note:   candidate expects 3 arguments, 4 provided
+     connect(syntaxCppAction, SIGNAL(triggered()), texteditor, SLOT(syntaxCpp()));
+                                                                                ^
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:295:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount == (-1)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, const QObject *context, Func2 slot,
+             ^
+/usr/include/qt5/QtCore/qobject.h:295:13: note:   template argument deduction/substitution failed:
+/usr/include/qt5/QtCore/qobject.h: In substitution of ‘template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount == (-1)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+mainwindow.cpp:116:80:   required from here
+/usr/include/qt5/QtCore/qobject.h:295:13: error: no type named ‘Object’ in ‘struct QtPrivate::FunctionPointer&#amp;lt;const char*&#amp;gt;’
+mainwindow.cpp:118:59: error: invalid use of incomplete type ‘class QAction’
+     setTabsAction = new QAction(tr("Set &#amp;Tab Width"), this);
+                                                           ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+mainwindow.cpp:119:18: error: invalid use of incomplete type ‘class QAction’
+     setTabsAction-&#amp;gt;setStatusTip(tr("Alter the tab width"));
+                  ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+<p>
+<strong>mainwindow.cpp:120:80: error: no matching function for call to ‘MainWindow::connect(QAction*&#amp;, const char [13], Texteditor*&#amp;, const char [15])’
+     connect(setTabsAction, SIGNAL(triggered()), texteditor, SLOT(setTabWidth()));</strong></p>
+                                                                                ^
+mainwindow.cpp:120:80: note: candidates are:
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:198:36: note: static QMetaObject::Connection QObject::connect(const QObject*, const char*, const QObject*, const char*, Qt::ConnectionType)
+     static QMetaObject::Connection connect(const QObject *sender, const char *signal,
+                                    ^
+/usr/include/qt5/QtCore/qobject.h:198:36: note:   no known conversion for argument 1 from ‘QAction*’ to ‘const QObject*’
+/usr/include/qt5/QtCore/qobject.h:201:36: note: static QMetaObject::Connection QObject::connect(const QObject*, const QMetaMethod&#amp;, const QObject*, const QMetaMethod&#amp;, Qt::ConnectionType)
+     static QMetaObject::Connection connect(const QObject *sender, const QMetaMethod &#amp;signal,
+                                    ^
+/usr/include/qt5/QtCore/qobject.h:201:36: note:   no known conversion for argument 1 from ‘QAction*’ to ‘const QObject*’
+/usr/include/qt5/QtCore/qobject.h:479:32: note: QMetaObject::Connection QObject::connect(const QObject*, const char*, const char*, Qt::ConnectionType) const
+ inline QMetaObject::Connection QObject::connect(const QObject *asender, const char *asignal,
+                                ^
+/usr/include/qt5/QtCore/qobject.h:479:32: note:   no known conversion for argument 1 from ‘QAction*’ to ‘const QObject*’
+/usr/include/qt5/QtCore/qobject.h:215:43: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static QMetaObject::Connection QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const typename QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::Object*, Func2, Qt::ConnectionType)
+     static inline QMetaObject::Connection connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal,
+                                           ^
+/usr/include/qt5/QtCore/qobject.h:215:43: note:   template argument deduction/substitution failed:
+/usr/include/qt5/QtCore/qobject.h: In substitution of ‘template&#amp;lt;class Func1, class Func2&#amp;gt; static QMetaObject::Connection QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const typename QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::Object*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+mainwindow.cpp:120:80:   required from here
+/usr/include/qt5/QtCore/qobject.h:215:43: error: no type named ‘Object’ in ‘struct QtPrivate::FunctionPointer&#amp;lt;const char*&#amp;gt;’
+/usr/include/qt5/QtCore/qobject.h:247:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;((int)(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount) &#amp;gt;= 0), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, Func2)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, Func2 slot)
+             ^
+/usr/include/qt5/QtCore/qobject.h:247:13: note:   template argument deduction/substitution failed:
+mainwindow.cpp:120:80: note:   candidate expects 3 arguments, 4 provided
+     connect(setTabsAction, SIGNAL(triggered()), texteditor, SLOT(setTabWidth()));
+                                                                                ^
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:256:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(((int)(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount) &#amp;gt;= 0) &#amp;&#amp; (! QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::IsPointerToMemberFunction)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, const QObject *context, Func2 slot,
+             ^
+/usr/include/qt5/QtCore/qobject.h:256:13: note:   template argument deduction/substitution failed:
+/usr/include/qt5/QtCore/qobject.h: In substitution of ‘template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(((int)(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount) &#amp;gt;= 0) &#amp;&#amp; (! QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::IsPointerToMemberFunction)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+mainwindow.cpp:120:80:   required from here
+/usr/include/qt5/QtCore/qobject.h:256:13: error: invalid use of incomplete type ‘struct QtPrivate::QEnableIf&#amp;lt;false, QMetaObject::Connection&#amp;gt;’
+In file included from /usr/include/qt5/QtCore/qnamespace.h:45:0,
+                 from /usr/include/qt5/QtCore/qobjectdefs.h:45,
+                 from /usr/include/qt5/QtCore/qobject.h:48,
+                 from /usr/include/qt5/QtCore/qabstractanimation.h:45,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qglobal.h:1014:45: error: declaration of ‘struct QtPrivate::QEnableIf&#amp;lt;false, QMetaObject::Connection&#amp;gt;’
+ template &#amp;lt;bool B, typename T = void&#amp;gt; struct QEnableIf;
+                                             ^
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:287:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount == (-1)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, Func2)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, Func2 slot)
+             ^
+/usr/include/qt5/QtCore/qobject.h:287:13: note:   template argument deduction/substitution failed:
+mainwindow.cpp:120:80: note:   candidate expects 3 arguments, 4 provided
+     connect(setTabsAction, SIGNAL(triggered()), texteditor, SLOT(setTabWidth()));
+                                                                                ^
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:295:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount == (-1)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, const QObject *context, Func2 slot,
+             ^
+/usr/include/qt5/QtCore/qobject.h:295:13: note:   template argument deduction/substitution failed:
+/usr/include/qt5/QtCore/qobject.h: In substitution of ‘template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount == (-1)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+mainwindow.cpp:120:80:   required from here
+/usr/include/qt5/QtCore/qobject.h:295:13: error: no type named ‘Object’ in ‘struct QtPrivate::FunctionPointer&#amp;lt;const char*&#amp;gt;’
+mainwindow.cpp:122:49: error: invalid use of incomplete type ‘class QAction’
+     aboutAction = new QAction(tr("&#amp;About"), this);
+                                                 ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+mainwindow.cpp:123:16: error: invalid use of incomplete type ‘class QAction’
+     aboutAction-&#amp;gt;setIcon(QIcon(":/images/icon.jpg"));
+                ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+mainwindow.cpp:124:16: error: invalid use of incomplete type ‘class QAction’
+     aboutAction-&#amp;gt;setStatusTip(tr("About Jotter and Paradise Office"));
+                ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+mainwindow.cpp:125:66: error: no matching function for call to ‘MainWindow::connect(QAction*&#amp;, const char [13], MainWindow* const, const char [9])’
+     connect(aboutAction, SIGNAL(triggered()), this, SLOT(about()));
+                                                                  ^
+mainwindow.cpp:125:66: note: candidates are:
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:198:36: note: static QMetaObject::Connection QObject::connect(const QObject*, const char*, const QObject*, const char*, Qt::ConnectionType)
+     static QMetaObject::Connection connect(const QObject *sender, const char *signal,
+                                    ^
+/usr/include/qt5/QtCore/qobject.h:198:36: note:   no known conversion for argument 1 from ‘QAction*’ to ‘const QObject*’
+/usr/include/qt5/QtCore/qobject.h:201:36: note: static QMetaObject::Connection QObject::connect(const QObject*, const QMetaMethod&#amp;, const QObject*, const QMetaMethod&#amp;, Qt::ConnectionType)
+     static QMetaObject::Connection connect(const QObject *sender, const QMetaMethod &#amp;signal,
+                                    ^
+/usr/include/qt5/QtCore/qobject.h:201:36: note:   no known conversion for argument 1 from ‘QAction*’ to ‘const QObject*’
+/usr/include/qt5/QtCore/qobject.h:479:32: note: QMetaObject::Connection QObject::connect(const QObject*, const char*, const char*, Qt::ConnectionType) const
+ inline QMetaObject::Connection QObject::connect(const QObject *asender, const char *asignal,
+                                ^
+/usr/include/qt5/QtCore/qobject.h:479:32: note:   no known conversion for argument 1 from ‘QAction*’ to ‘const QObject*’
+/usr/include/qt5/QtCore/qobject.h:215:43: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static QMetaObject::Connection QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const typename QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::Object*, Func2, Qt::ConnectionType)
+     static inline QMetaObject::Connection connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal,
+                                           ^
+/usr/include/qt5/QtCore/qobject.h:215:43: note:   template argument deduction/substitution failed:
+/usr/include/qt5/QtCore/qobject.h: In substitution of ‘template&#amp;lt;class Func1, class Func2&#amp;gt; static QMetaObject::Connection QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const typename QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::Object*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+mainwindow.cpp:125:66:   required from here
+/usr/include/qt5/QtCore/qobject.h:215:43: error: no type named ‘Object’ in ‘struct QtPrivate::FunctionPointer&#amp;lt;const char*&#amp;gt;’
+/usr/include/qt5/QtCore/qobject.h:247:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;((int)(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount) &#amp;gt;= 0), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, Func2)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, Func2 slot)
+             ^
+/usr/include/qt5/QtCore/qobject.h:247:13: note:   template argument deduction/substitution failed:
+mainwindow.cpp:125:66: note:   candidate expects 3 arguments, 4 provided
+     connect(aboutAction, SIGNAL(triggered()), this, SLOT(about()));
+                                                                  ^
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:256:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(((int)(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount) &#amp;gt;= 0) &#amp;&#amp; (! QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::IsPointerToMemberFunction)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, const QObject *context, Func2 slot,
+             ^
+/usr/include/qt5/QtCore/qobject.h:256:13: note:   template argument deduction/substitution failed:
+/usr/include/qt5/QtCore/qobject.h: In substitution of ‘template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(((int)(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount) &#amp;gt;= 0) &#amp;&#amp; (! QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::IsPointerToMemberFunction)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+mainwindow.cpp:125:66:   required from here
+/usr/include/qt5/QtCore/qobject.h:256:13: error: invalid use of incomplete type ‘struct QtPrivate::QEnableIf&#amp;lt;false, QMetaObject::Connection&#amp;gt;’
+In file included from /usr/include/qt5/QtCore/qnamespace.h:45:0,
+                 from /usr/include/qt5/QtCore/qobjectdefs.h:45,
+                 from /usr/include/qt5/QtCore/qobject.h:48,
+                 from /usr/include/qt5/QtCore/qabstractanimation.h:45,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qglobal.h:1014:45: error: declaration of ‘struct QtPrivate::QEnableIf&#amp;lt;false, QMetaObject::Connection&#amp;gt;’
+ template &#amp;lt;bool B, typename T = void&#amp;gt; struct QEnableIf;
+                                             ^
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:287:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount == (-1)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, Func2)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, Func2 slot)
+             ^
+/usr/include/qt5/QtCore/qobject.h:287:13: note:   template argument deduction/substitution failed:
+mainwindow.cpp:125:66: note:   candidate expects 3 arguments, 4 provided
+     connect(aboutAction, SIGNAL(triggered()), this, SLOT(about()));
+                                                                  ^
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:295:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount == (-1)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, const QObject *context, Func2 slot,
+             ^
+/usr/include/qt5/QtCore/qobject.h:295:13: note:   template argument deduction/substitution failed:
+/usr/include/qt5/QtCore/qobject.h: In substitution of ‘template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount == (-1)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+mainwindow.cpp:125:66:   required from here
+/usr/include/qt5/QtCore/qobject.h:295:13: error: no type named ‘Object’ in ‘struct QtPrivate::FunctionPointer&#amp;lt;const char*&#amp;gt;’
+mainwindow.cpp:127:54: error: invalid use of incomplete type ‘class QAction’
+     aboutQtAction = new QAction(tr("About &#amp;Qt"), this);
+                                                      ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+mainwindow.cpp:128:18: error: invalid use of incomplete type ‘class QAction’
+     aboutQtAction-&#amp;gt;setStatusTip(tr("The underlying widget system"));
+                  ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+mainwindow.cpp:129:70: error: no matching function for call to ‘MainWindow::connect(QAction*&#amp;, const char [13], QGuiApplication*, const char [11])’
+     connect(aboutQtAction, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
+                                                                      ^
+mainwindow.cpp:129:70: note: candidates are:
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:198:36: note: static QMetaObject::Connection QObject::connect(const QObject*, const char*, const QObject*, const char*, Qt::ConnectionType)
+     static QMetaObject::Connection connect(const QObject *sender, const char *signal,
+                                    ^
+/usr/include/qt5/QtCore/qobject.h:198:36: note:   no known conversion for argument 1 from ‘QAction*’ to ‘const QObject*’
+/usr/include/qt5/QtCore/qobject.h:201:36: note: static QMetaObject::Connection QObject::connect(const QObject*, const QMetaMethod&#amp;, const QObject*, const QMetaMethod&#amp;, Qt::ConnectionType)
+     static QMetaObject::Connection connect(const QObject *sender, const QMetaMethod &#amp;signal,
+                                    ^
+/usr/include/qt5/QtCore/qobject.h:201:36: note:   no known conversion for argument 1 from ‘QAction*’ to ‘const QObject*’
+/usr/include/qt5/QtCore/qobject.h:479:32: note: QMetaObject::Connection QObject::connect(const QObject*, const char*, const char*, Qt::ConnectionType) const
+ inline QMetaObject::Connection QObject::connect(const QObject *asender, const char *asignal,
+                                ^
+/usr/include/qt5/QtCore/qobject.h:479:32: note:   no known conversion for argument 1 from ‘QAction*’ to ‘const QObject*’
+/usr/include/qt5/QtCore/qobject.h:215:43: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static QMetaObject::Connection QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const typename QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::Object*, Func2, Qt::ConnectionType)
+     static inline QMetaObject::Connection connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal,
+                                           ^
+/usr/include/qt5/QtCore/qobject.h:215:43: note:   template argument deduction/substitution failed:
+/usr/include/qt5/QtCore/qobject.h: In substitution of ‘template&#amp;lt;class Func1, class Func2&#amp;gt; static QMetaObject::Connection QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const typename QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::Object*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+mainwindow.cpp:129:70:   required from here
+/usr/include/qt5/QtCore/qobject.h:215:43: error: no type named ‘Object’ in ‘struct QtPrivate::FunctionPointer&#amp;lt;const char*&#amp;gt;’
+/usr/include/qt5/QtCore/qobject.h:247:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;((int)(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount) &#amp;gt;= 0), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, Func2)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, Func2 slot)
+             ^
+/usr/include/qt5/QtCore/qobject.h:247:13: note:   template argument deduction/substitution failed:
+mainwindow.cpp:129:70: note:   candidate expects 3 arguments, 4 provided
+     connect(aboutQtAction, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
+                                                                      ^
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:256:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(((int)(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount) &#amp;gt;= 0) &#amp;&#amp; (! QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::IsPointerToMemberFunction)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, const QObject *context, Func2 slot,
+             ^
+/usr/include/qt5/QtCore/qobject.h:256:13: note:   template argument deduction/substitution failed:
+/usr/include/qt5/QtCore/qobject.h: In substitution of ‘template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(((int)(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount) &#amp;gt;= 0) &#amp;&#amp; (! QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::IsPointerToMemberFunction)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+mainwindow.cpp:129:70:   required from here
+/usr/include/qt5/QtCore/qobject.h:256:13: error: invalid use of incomplete type ‘struct QtPrivate::QEnableIf&#amp;lt;false, QMetaObject::Connection&#amp;gt;’
+In file included from /usr/include/qt5/QtCore/qnamespace.h:45:0,
+                 from /usr/include/qt5/QtCore/qobjectdefs.h:45,
+                 from /usr/include/qt5/QtCore/qobject.h:48,
+                 from /usr/include/qt5/QtCore/qabstractanimation.h:45,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qglobal.h:1014:45: error: declaration of ‘struct QtPrivate::QEnableIf&#amp;lt;false, QMetaObject::Connection&#amp;gt;’
+ template &#amp;lt;bool B, typename T = void&#amp;gt; struct QEnableIf;
+                                             ^
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:287:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount == (-1)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, Func2)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, Func2 slot)
+             ^
+/usr/include/qt5/QtCore/qobject.h:287:13: note:   template argument deduction/substitution failed:
+mainwindow.cpp:129:70: note:   candidate expects 3 arguments, 4 provided
+     connect(aboutQtAction, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
+                                                                      ^
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:295:13: note: template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount == (-1)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)
+             connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func1&#amp;gt;::Object *sender, Func1 signal, const QObject *context, Func2 slot,
+             ^
+/usr/include/qt5/QtCore/qobject.h:295:13: note:   template argument deduction/substitution failed:
+/usr/include/qt5/QtCore/qobject.h: In substitution of ‘template&#amp;lt;class Func1, class Func2&#amp;gt; static typename QtPrivate::QEnableIf&#amp;lt;(QtPrivate::FunctionPointer&#amp;lt;Func2&#amp;gt;::ArgumentCount == (-1)), QMetaObject::Connection&#amp;gt;::Type QObject::connect(const typename QtPrivate::FunctionPointer&#amp;lt;Func&#amp;gt;::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+mainwindow.cpp:129:70:   required from here
+/usr/include/qt5/QtCore/qobject.h:295:13: error: no type named ‘Object’ in ‘struct QtPrivate::FunctionPointer&#amp;lt;const char*&#amp;gt;’
+mainwindow.cpp: In member function ‘void MainWindow::createMenus()’:
+mainwindow.cpp:134:25: error: invalid use of incomplete type ‘class QMenuBar’
+     fileMenu = menuBar()-&#amp;gt;addMenu(tr("&#amp;File"));
+                         ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:55:7: error: forward declaration of ‘class QMenuBar’
+ class QMenuBar;
+       ^
+mainwindow.cpp:135:13: error: invalid use of incomplete type ‘class QMenu’
+     fileMenu-&#amp;gt;addAction(newAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:136:13: error: invalid use of incomplete type ‘class QMenu’
+     fileMenu-&#amp;gt;addAction(openAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:137:13: error: invalid use of incomplete type ‘class QMenu’
+     fileMenu-&#amp;gt;addAction(saveAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:138:13: error: invalid use of incomplete type ‘class QMenu’
+     fileMenu-&#amp;gt;addAction(saveAsAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:139:34: error: invalid use of incomplete type ‘class QMenu’
+     recentFilesSubMenu = fileMenu-&#amp;gt;addMenu(tr("&#amp;Recent Files"));
+                                  ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:141:20: error: invalid use of incomplete type ‘class QMenu’
+  recentFilesSubMenu-&#amp;gt;addAction(recentFileActions[i]);
+                    ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:142:31: error: invalid use of incomplete type ‘class QMenu’
+     separatorAction = fileMenu-&#amp;gt;addSeparator();
+                               ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:143:13: error: invalid use of incomplete type ‘class QMenu’
+     fileMenu-&#amp;gt;addAction(closeAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:144:13: error: invalid use of incomplete type ‘class QMenu’
+     fileMenu-&#amp;gt;addAction(exitAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:146:25: error: invalid use of incomplete type ‘class QMenuBar’
+     editMenu = menuBar()-&#amp;gt;addMenu(tr("&#amp;Edit"));
+                         ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:55:7: error: forward declaration of ‘class QMenuBar’
+ class QMenuBar;
+       ^
+mainwindow.cpp:147:13: error: invalid use of incomplete type ‘class QMenu’
+     editMenu-&#amp;gt;addAction(cutAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:148:13: error: invalid use of incomplete type ‘class QMenu’
+     editMenu-&#amp;gt;addAction(copyAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:149:13: error: invalid use of incomplete type ‘class QMenu’
+     editMenu-&#amp;gt;addAction(pasteAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:150:13: error: invalid use of incomplete type ‘class QMenu’
+     editMenu-&#amp;gt;addAction(deleteAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:151:13: error: invalid use of incomplete type ‘class QMenu’
+     editMenu-&#amp;gt;addSeparator();
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:152:13: error: invalid use of incomplete type ‘class QMenu’
+     editMenu-&#amp;gt;addAction(goToLineAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:153:13: error: invalid use of incomplete type ‘class QMenu’
+     editMenu-&#amp;gt;addAction(findAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:155:25: error: invalid use of incomplete type ‘class QMenuBar’
+     viewMenu = menuBar()-&#amp;gt;addMenu(tr("&#amp;View"));
+                         ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:55:7: error: forward declaration of ‘class QMenuBar’
+ class QMenuBar;
+       ^
+mainwindow.cpp:156:13: error: invalid use of incomplete type ‘class QMenu’
+     viewMenu-&#amp;gt;addAction(syntaxCppAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:157:13: error: invalid use of incomplete type ‘class QMenu’
+     viewMenu-&#amp;gt;addAction(setTabsAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:159:25: error: invalid use of incomplete type ‘class QMenuBar’
+     helpMenu = menuBar()-&#amp;gt;addMenu(tr("&#amp;Help"));
+                         ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:55:7: error: forward declaration of ‘class QMenuBar’
+ class QMenuBar;
+       ^
+mainwindow.cpp:160:13: error: invalid use of incomplete type ‘class QMenu’
+     helpMenu-&#amp;gt;addAction(aboutAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp:161:13: error: invalid use of incomplete type ‘class QMenu’
+     helpMenu-&#amp;gt;addAction(aboutQtAction);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:58:7: error: forward declaration of ‘class QMenu’
+ class QMenu;
+       ^
+mainwindow.cpp: In member function ‘void MainWindow::createToolBars()’:
+mainwindow.cpp:176:14: error: invalid use of incomplete type ‘class QToolBar’
+     commonBar-&#amp;gt;addAction(newAction);
+              ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:57:7: error: forward declaration of ‘class QToolBar’
+ class QToolBar;
+       ^
+mainwindow.cpp:177:14: error: invalid use of incomplete type ‘class QToolBar’
+     commonBar-&#amp;gt;addAction(openAction);
+              ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:57:7: error: forward declaration of ‘class QToolBar’
+ class QToolBar;
+       ^
+mainwindow.cpp:178:14: error: invalid use of incomplete type ‘class QToolBar’
+     commonBar-&#amp;gt;addAction(saveAction);
+              ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:57:7: error: forward declaration of ‘class QToolBar’
+ class QToolBar;
+       ^
+mainwindow.cpp:179:14: error: invalid use of incomplete type ‘class QToolBar’
+     commonBar-&#amp;gt;addSeparator();
+              ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:57:7: error: forward declaration of ‘class QToolBar’
+ class QToolBar;
+       ^
+mainwindow.cpp:180:14: error: invalid use of incomplete type ‘class QToolBar’
+     commonBar-&#amp;gt;addAction(cutAction);
+              ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:57:7: error: forward declaration of ‘class QToolBar’
+ class QToolBar;
+       ^
+mainwindow.cpp:181:14: error: invalid use of incomplete type ‘class QToolBar’
+     commonBar-&#amp;gt;addAction(copyAction);
+              ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:57:7: error: forward declaration of ‘class QToolBar’
+ class QToolBar;
+       ^
+mainwindow.cpp:182:14: error: invalid use of incomplete type ‘class QToolBar’
+     commonBar-&#amp;gt;addAction(pasteAction);
+              ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:57:7: error: forward declaration of ‘class QToolBar’
+ class QToolBar;
+       ^
+mainwindow.cpp:183:14: error: invalid use of incomplete type ‘class QToolBar’
+     commonBar-&#amp;gt;addSeparator();
+              ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:57:7: error: forward declaration of ‘class QToolBar’
+ class QToolBar;
+       ^
+mainwindow.cpp:184:14: error: invalid use of incomplete type ‘class QToolBar’
+     commonBar-&#amp;gt;addAction(syntaxCppAction);
+              ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:57:7: error: forward declaration of ‘class QToolBar’
+ class QToolBar;
+       ^
+mainwindow.cpp: In member function ‘void MainWindow::createStatusBar()’:
+mainwindow.cpp:189:39: error: invalid use of incomplete type ‘class QLabel’
+     locationLabel = new QLabel(" 999 ");
+                                       ^
+In file included from mainwindow.cpp:2:0:
+find/finddialog.h:7:7: error: forward declaration of ‘class QLabel’
+ class QLabel;
+       ^
+mainwindow.cpp:190:18: error: invalid use of incomplete type ‘class QLabel’
+     locationLabel-&#amp;gt;setAlignment(Qt::AlignHCenter);
+                  ^
+In file included from mainwindow.cpp:2:0:
+find/finddialog.h:7:7: error: forward declaration of ‘class QLabel’
+ class QLabel;
+       ^
+mainwindow.cpp:191:18: error: invalid use of incomplete type ‘class QLabel’
+     locationLabel-&#amp;gt;setMinimumSize(locationLabel-&#amp;gt;sizeHint());
+                  ^
+In file included from mainwindow.cpp:2:0:
+find/finddialog.h:7:7: error: forward declaration of ‘class QLabel’
+ class QLabel;
+       ^
+mainwindow.cpp:191:48: error: invalid use of incomplete type ‘class QLabel’
+     locationLabel-&#amp;gt;setMinimumSize(locationLabel-&#amp;gt;sizeHint());
+                                                ^
+In file included from mainwindow.cpp:2:0:
+find/finddialog.h:7:7: error: forward declaration of ‘class QLabel’
+ class QLabel;
+       ^
+mainwindow.cpp:193:16: error: invalid use of incomplete type ‘class QStatusBar’
+     statusBar()-&#amp;gt;addWidget(locationLabel);
+                ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:56:7: error: forward declaration of ‘class QStatusBar’
+ class QStatusBar;
+       ^
+mainwindow.cpp: In member function ‘void MainWindow::updateStatusBar()’:
+mainwindow.cpp:201:18: error: invalid use of incomplete type ‘class QLabel’
+     locationLabel-&#amp;gt;setText(texteditor-&#amp;gt;currentLine());
+                  ^
+In file included from mainwindow.cpp:2:0:
+find/finddialog.h:7:7: error: forward declaration of ‘class QLabel’
+ class QLabel;
+       ^
+mainwindow.cpp:201:40: error: ‘class Texteditor’ has no member named ‘currentLine’
+     locationLabel-&#amp;gt;setText(texteditor-&#amp;gt;currentLine());
+                                        ^
+mainwindow.cpp: At global scope:
+mainwindow.cpp:204:37: error: no ‘void MainWindow::texteditorModified()’ member function declared in class ‘MainWindow’
+ void MainWindow::texteditorModified()
+                                     ^
+mainwindow.cpp: In member function ‘bool MainWindow::okToContinue()’:
+mainwindow.cpp:219:10: error: ‘QMessageBox’ has not been declared
+  int r = QMessageBox::warning(this, tr("Jotter"), tr("The text has been changed. \n Do you want to save your changes?"), QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
+          ^
+mainwindow.cpp:219:122: error: ‘QMessageBox’ has not been declared
+  int r = QMessageBox::warning(this, tr("Jotter"), tr("The text has been changed. \n Do you want to save your changes?"), QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
+                                                                                                                          ^
+mainwindow.cpp:219:141: error: ‘QMessageBox’ has not been declared
+  int r = QMessageBox::warning(this, tr("Jotter"), tr("The text has been changed. \n Do you want to save your changes?"), QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
+                                                                                                                                             ^
+mainwindow.cpp:219:159: error: ‘QMessageBox’ has not been declared
+  int r = QMessageBox::warning(this, tr("Jotter"), tr("The text has been changed. \n Do you want to save your changes?"), QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
+                                                                                                                                                               ^
+mainwindow.cpp:220:11: error: ‘QMessageBox’ has not been declared
+  if (r == QMessageBox::Yes) {
+           ^
+mainwindow.cpp:222:18: error: ‘QMessageBox’ has not been declared
+  } else if (r == QMessageBox::Cancel) {
+                  ^
+mainwindow.cpp: In member function ‘void MainWindow::open()’:
+mainwindow.cpp:232:21: error: ‘QFileDialog’ has not been declared
+  QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), ".", tr("Text files (*.txt *.cpp *.h *.hpp)"));
+                     ^
+mainwindow.cpp: In member function ‘bool MainWindow::loadFile(const QString&#amp;)’:
+mainwindow.cpp:241:13: error: invalid use of incomplete type ‘class QStatusBar’
+  statusBar()-&#amp;gt;showMessage(tr("Loading cancelled"), 2000);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:56:7: error: forward declaration of ‘class QStatusBar’
+ class QStatusBar;
+       ^
+mainwindow.cpp:246:16: error: invalid use of incomplete type ‘class QStatusBar’
+     statusBar()-&#amp;gt;showMessage(tr("File loaded"), 2000);
+                ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:56:7: error: forward declaration of ‘class QStatusBar’
+ class QStatusBar;
+       ^
+mainwindow.cpp: In member function ‘bool MainWindow::saveFile(const QString&#amp;)’:
+mainwindow.cpp:261:13: error: invalid use of incomplete type ‘class QStatusBar’
+  statusBar()-&#amp;gt;showMessage(tr("Saving cancelled"), 2000);
+             ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:56:7: error: forward declaration of ‘class QStatusBar’
+ class QStatusBar;
+       ^
+mainwindow.cpp:265:16: error: invalid use of incomplete type ‘class QStatusBar’
+     statusBar()-&#amp;gt;showMessage(tr("File saved"), 2000);
+                ^
+In file included from /usr/include/qt5/QtWidgets/QMainWindow:1:0,
+                 from mainwindow.h:3,
+                 from mainwindow.cpp:4:
+/usr/include/qt5/QtWidgets/qmainwindow.h:56:7: error: forward declaration of ‘class QStatusBar’
+ class QStatusBar;
+       ^
+mainwindow.cpp: In member function ‘bool MainWindow::saveAs()’:
+mainwindow.cpp:271:24: error: ‘QFileDialog’ has not been declared
+     QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"), ".", tr("Text files (*.txt *.cpp *.hpp *.h )"));
+                        ^
+mainwindow.cpp: In member function ‘void MainWindow::updateRecentFileActions()’:
+mainwindow.cpp:316:26: error: invalid use of incomplete type ‘class QAction’
+      recentFileActions[j]-&#amp;gt;setText(text);
+                          ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+mainwindow.cpp:317:26: error: invalid use of incomplete type ‘class QAction’
+      recentFileActions[j]-&#amp;gt;setData(recentFiles[j]);
+                          ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+mainwindow.cpp:318:33: error: invalid use of incomplete type ‘class QAction’
+             recentFileActions[j]-&#amp;gt;setVisible(true);
+                                 ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+mainwindow.cpp:320:26: error: invalid use of incomplete type ‘class QAction’
+      recentFileActions[j]-&#amp;gt;setVisible(false);
+                          ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+mainwindow.cpp: In member function ‘void MainWindow::openRecentFile()’:
+mainwindow.cpp:331:21: error: invalid use of incomplete type ‘class QAction’
+      loadFile(action-&#amp;gt;data().toString());
+                     ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+mainwindow.cpp: In member function ‘void MainWindow::goToLine()’:
+mainwindow.cpp:351:5: error: ‘GoToLineDialog’ was not declared in this scope
+     GoToLineDialog dialog(this);
+     ^
+mainwindow.cpp:351:20: error: expected ‘;’ before ‘dialog’
+     GoToLineDialog dialog(this);
+                    ^
+mainwindow.cpp:352:9: error: ‘dialog’ was not declared in this scope
+     if (dialog.exec()) {
+         ^
+mainwindow.cpp:354:42: error: ‘class Texteditor’ has no member named ‘findBlockByLineNumber’
+         QTextCursor new_line(texteditor-&#amp;gt;findBlockByLineNumber( line_no - 1 ));
+                                          ^
+mainwindow.cpp: In member function ‘void MainWindow::about()’:
+mainwindow.cpp:362:5: error: ‘QMessageBox’ has not been declared
+     QMessageBox::about(this, tr("About Jotter"), tr("&#amp;lt;h2&#amp;gt;Jotter 0.1&#amp;lt;/h2" "&#amp;lt;p&#amp;gt;GNU GPL 2 Paradise Office &#amp;lt;/p&#amp;gt;&#amp;lt;p&#amp;gt;Another programmer's text editor. You can never have enough text editors! :-) &#amp;lt;/p&#amp;gt;"));
+     ^
+In file included from /usr/include/qt5/QtCore/qobject.h:48:0,
+                 from /usr/include/qt5/QtCore/qabstractanimation.h:45,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobjectdefs.h: In instantiation of ‘struct QtPrivate::HasQ_OBJECT_Macro&#amp;lt;QAction&#amp;gt;’:
+/usr/include/qt5/QtCore/qobject.h:520:5:   required from ‘T qobject_cast(QObject*) [with T = QAction*]’
+mainwindow.cpp:329:52:   required from here
+/usr/include/qt5/QtCore/qobjectdefs.h:489:37: error: incomplete type ‘QAction’ used in nested name specifier
+         enum { Value =  sizeof(test(&#amp;Object::qt_metacall)) == sizeof(int) };
+                                     ^
+In file included from /usr/include/qt5/QtCore/qnamespace.h:45:0,
+                 from /usr/include/qt5/QtCore/qobjectdefs.h:45,
+                 from /usr/include/qt5/QtCore/qobject.h:48,
+                 from /usr/include/qt5/QtCore/qabstractanimation.h:45,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h: In instantiation of ‘T qobject_cast(QObject*) [with T = QAction*]’:
+mainwindow.cpp:329:52:   required from here
+/usr/include/qt5/QtCore/qglobal.h:679:85: error: invalid application of ‘sizeof’ to incomplete type ‘QStaticAssertFailure&#amp;lt;false&#amp;gt;’
+     enum {Q_STATIC_ASSERT_PRIVATE_JOIN(q_static_assert_result, __COUNTER__) = sizeof(QStaticAssertFailure&#amp;lt;!!(Condition)&#amp;gt;)}
+                                                                                     ^
+/usr/include/qt5/QtCore/qglobal.h:684:47: note: in expansion of macro ‘Q_STATIC_ASSERT’
+ #define Q_STATIC_ASSERT_X(Condition, Message) Q_STATIC_ASSERT(Condition)
+                                               ^
+/usr/include/qt5/QtCore/qobject.h:520:5: note: in expansion of macro ‘Q_STATIC_ASSERT_X’
+     Q_STATIC_ASSERT_X(QtPrivate::HasQ_OBJECT_Macro&#amp;lt;ObjType&#amp;gt;::Value,
+     ^
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h:522:85: error: invalid use of incomplete type ‘class QAction’
+     return static_cast&#amp;lt;T&#amp;gt;(reinterpret_cast&#amp;lt;T&#amp;gt;(object)-&#amp;gt;staticMetaObject.cast(object));
+                                                                                     ^
+In file included from /usr/include/qt5/QtGui/qaccessible.h:57:0,
+                 from /usr/include/qt5/QtGui/QtGui:4,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtGui/qevent.h:64:7: error: forward declaration of ‘class QAction’
+ class QAction;
+       ^
+In file included from /usr/include/qt5/QtCore/qabstractanimation.h:45:0,
+                 from /usr/include/qt5/QtCore/QtCore:4,
+                 from /usr/include/qt5/QtGui/QtGuiDepends:2,
+                 from /usr/include/qt5/QtGui/QtGui:3,
+                 from mainwindow.cpp:1:
+/usr/include/qt5/QtCore/qobject.h: In function ‘T qobject_cast(QObject*) [with T = QAction*]’:
+/usr/include/qt5/QtCore/qobject.h:523:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [mainwindow.o] Error 1
+
+</body></html>

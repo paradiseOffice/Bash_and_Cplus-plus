@@ -1,0 +1,13 @@
+ ./grids 
+Object::connect: No such slot MainWindow::openFile()
+Object::connect: No such slot MainWindow::saveFile()
+Object::connect: No such slot MainWindow::saveAsFile()
+Object::connect: No such slot MainWindow::cutItem()
+Object::connect: No such slot MainWindow::copyItem()
+Object::connect: No such slot MainWindow::pasteItem()
+Object::connect: No such slot MainWindow::deleteItem()
+Object::connect: No such slot MainWindow::selectCurrentRow()
+Object::connect: No such slot MainWindow::selectCurrentColumn()
+Object::connect: No such slot MainWindow::recalculate()
+Object::connect: No such slot MainWindow::autoRecalc()
+kfilemodule(31120) KSambaSharePrivate::findSmbConf: KSambaShare: Could not find smb.conf! 

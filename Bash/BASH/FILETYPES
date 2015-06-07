@@ -1,0 +1,22 @@
+# Menu program to show different file types.
+echo s. Lists OpenOffice writer files.
+echo m. Lists midi files.
+echo j. Lists jpg pictures.
+
+echo -n "Please enter choice: "
+read choice
+
+case $choice in
+     s)
+       ls *.sxw
+       ;;
+     m)
+       ls *.mid
+       ;;
+     j)
+       ls *.jpg
+       ;;
+     *)
+       echo wrong option please try again
+esac
+             

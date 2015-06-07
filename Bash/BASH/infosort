@@ -1,0 +1,22 @@
+#! /bin/bash
+
+IFS=:
+morerec=yes
+echo "Input format is <primarykey>:<Artist>:<Title>:<Genre>:<type>"
+
+while [ "$morerec" = yes ]
+	do
+		echo -n "Please enter a record: "
+		read  primarykey Artist Title Genre type
+		echo "$primarykey	$Artist	$Title	$Genre	$type" >>records
+echo -n "Do you wish to continue? "
+read morerec
+done
+
+while read primarykey Artist Title Genre type
+do
+
+echo "$primarykey $Artist $Title $Genre $type"
+
+done < records
+

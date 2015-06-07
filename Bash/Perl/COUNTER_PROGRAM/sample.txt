@@ -1,0 +1,11 @@
+The Internet is a collection of thousands of computers that
+communicate through certain methods that have been agreed
+on for many years. The Internet started about 25 years ago
+with a small handful of computers run by a few people as an
+experiment. The initial results were successful; the
+network was useful, so it grew.
+In fact, the Internet was partially intended to be an
+experiment for how to design a network that could grow
+easily, with very little central control. That concept is
+still considered radical today, and you find few networks
+as loose as the Internet.
